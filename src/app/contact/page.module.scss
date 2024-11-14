@@ -1,0 +1,64 @@
+/* Contact.module.css */
+
+.header {
+	background-color: #ffffff;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.logo {
+	max-width: 75px;
+	height: auto;
+}
+
+.contactContainer {
+	width: min(70%, 600px);
+	box-sizing: border-box;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-align: left;
+	position: relative;
+}
+
+@media only screen and (max-width: 520px) {
+	.contactContainer {
+		width: calc(100% - 20px);
+	}
+}
+
+.h1 {
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.contactInfo {
+	display: flex;
+	flex-direction: column;
+	font-size: 21px;
+}
+
+.contactInfo p {
+	margin: 10px 0;
+	color: #555;
+}
+
+.contactInfo a {
+	text-decoration: none;
+	color: #0800ff;
+}
+
+.tagline {
+	font-size: 15px;
+	font-weight: 100;
+	color: #888;
+}
+
+.cloud {
+	position: absolute;
+	top: -40px;
+	left: -40px;
+	width: 150px;
+}

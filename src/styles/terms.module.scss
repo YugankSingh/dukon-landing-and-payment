@@ -1,0 +1,69 @@
+.header {
+	background-color: #ffffff;
+	text-align: center;
+	padding: 20px 0;
+
+	.logo {
+		max-width: 75px;
+		height: auto;
+	}
+}
+.terms {
+	h1 {
+		color: #333;
+		margin-bottom: 20px;
+	}
+
+	h2 {
+		margin-bottom: 5px;
+		font-size: 18px;
+	}
+
+	h3 {
+		margin-top: 20px;
+	}
+
+	p {
+		margin-top: 3px;
+
+		&.tagline {
+			font-size: 15px;
+			font-weight: 100;
+			color: #888;
+		}
+	}
+}
+
+.division-container {
+	width: min(80%, 900px);
+	margin: 20px auto;
+	margin-bottom: 50px;
+	background-color: #fff;
+	padding: 40px;
+	border-radius: 12px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+	text-align: left;
+	position: relative;
+
+	.cloud {
+		position: absolute;
+		top: -40px;
+		left: -40px;
+		width: 150px;
+	}
+}
+
+.information {
+	display: flex;
+	flex-direction: column;
+
+	p {
+		margin: 10px 0;
+		color: #555;
+	}
+
+	a {
+		text-decoration: none;
+		color: #0800ff;
+	}
+}

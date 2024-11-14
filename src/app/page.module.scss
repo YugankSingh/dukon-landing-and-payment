@@ -1,0 +1,92 @@
+/* Hero.module.css */
+
+.hero {
+	height: 100%;
+	width: 100%;
+	background-image: url("/images/clouds-compressed.png");
+	background-size: cover;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+@media only screen and (max-width: 570px) {
+	.hero {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+
+.navLeft {
+	display: flex;
+}
+
+.navRight {
+	font-size: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	a{
+	text-decoration: none;
+	color: black;
+	}
+}
+
+.logoImg {
+	height: 90px;
+}
+
+.heroMain {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgb(36, 14, 14);
+}
+
+.heroMain h1 {
+	font-weight: 100;
+	font-size: 50px;
+}
+
+.heroMain h1 strong {
+	font-weight: 400;
+	font-size: 55px;
+}
+
+.heroInner {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	row-gap: 30px;
+}
+
+.heroInner > * {
+	margin: 0;
+}
+
+.heroInner h1 {
+	margin-bottom: -30px;
+}
+
+.heroInner p {
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.button {
+	all: unset;
+	cursor: pointer;
+	background: rgba(45, 1, 45, 0.152);
+	padding: 13px 50px;
+	font-size: 25px;
+	border-radius: 2px;
+	text-decoration: none;
+	color: inherit;
+}
