@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server"
 let validOrigins = {
 	suprech: "http://localhost:3000",
 }
-if (environment === "preivew")
+if (environment === "preview")
 	validOrigins = {
 		suprech: "https://dev.suprech.co.in",
 	}
