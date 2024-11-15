@@ -1,14 +1,14 @@
-import { adminConfig } from "@/library/admin-frontend/admin.config"
+import { environment } from "@/library/admin-frontend/admin.config"
 import { NextRequest, NextResponse } from "next/server"
 
 let validOrigins = {
 	suprech: "http://localhost:3000",
 }
-if (adminConfig.environment === "preivew")
+if (environment === "preivew")
 	validOrigins = {
 		suprech: "https://dev.suprech.co.in",
 	}
-else if (adminConfig.environment === "production")
+else if (environment === "production")
 	validOrigins = {
 		suprech: "https://suprech.co.in",
 	}
@@ -18,6 +18,8 @@ export function middleware(request: NextRequest) {
 	const prefix = "/checkout/payment/cashfree/"
 
 	console.log("prefix", prefix)
+	console.log("validOrigins", validOrigins)
+	console.log("environment", environment)
 	if (pathname.startsWith(prefix)) {
 		const storeID = pathname.slice(prefix.length).split("/")[0]
 
