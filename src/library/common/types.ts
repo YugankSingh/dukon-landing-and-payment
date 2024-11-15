@@ -89,7 +89,7 @@ export interface OrderItem {
 export type PaymentID = string
 export type PaymentBase = {
 	status: "Awaiting_Payment" | "Payment_Failed" | "Payment_Captured"
-	amount: Number
+	amount: number
 	currency: "INR"
 } & ({ isPaymentCaptured: true; paidOn: Date } | { isPaymentCaptured: false })
 
@@ -115,7 +115,7 @@ export interface Delivery {
 	type: "Delivery" | "Return" | "Replacement"
 	expectedDeliveryDate: Date
 	deliveredAt: Date
-	cost: Number
+	cost: number
 }
 
 export type OrderDTO = {

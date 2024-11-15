@@ -19,17 +19,9 @@ function index() {
 			mode: environment === "production" ? "production" : "sandbox",
 		})
 
-		let parent = document.getElementById("cashfree-drop")
-
-		console.log(parent)
 		const checkoutOptions = {
 			redirectTarget: "_self",
-
 			paymentSessionId: paymentSessionId,
-			// appearance: {
-			// 	width: "425px",
-			// 	height: "700px",
-			// },
 		}
 		cashfree.checkout(checkoutOptions).then(result => {
 			if (result.error) {
@@ -81,10 +73,7 @@ function index() {
 	return (
 		<div>
 			<Toaster />
-
-			<h1>Payments</h1>
-			<h2>store {storeID}</h2>
-			<div id="cashfree-drop"></div>
+			<h1>Loadinng...</h1>
 		</div>
 	)
 }

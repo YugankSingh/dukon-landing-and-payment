@@ -1,5 +1,4 @@
 import {
-	Product,
 	ProductID,
 	VariantAttributes,
 	VariantKey,

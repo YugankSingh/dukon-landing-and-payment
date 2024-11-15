@@ -21,6 +21,7 @@ function index() {
 		window.addEventListener("message", event => {
 			if (paymentDetails) return
 			// if (event.origin !== "https://parent-origin.com") return
+			console.log(event.data)
 			try {
 				let data
 				try {
