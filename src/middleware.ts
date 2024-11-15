@@ -17,6 +17,8 @@ export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl
 	const prefix = "/checkout/payment/cashfree/"
 
+	console.log("pathname", pathname, pathname.startsWith(prefix))
+
 	if (pathname.startsWith(prefix)) {
 		const storeID = pathname.slice(prefix.length).split("/")[0]
 
@@ -37,8 +39,8 @@ export function middleware(request: NextRequest) {
 	return NextResponse.next()
 }
 
-export const config = {
-	matcher: "/:param*",
-}
+// export const config = {
+// 	matcher: "/checkout/payment/cashfree/:storeID?",
+// }
 
 export const validParentOrigins = { ...validOrigins }
