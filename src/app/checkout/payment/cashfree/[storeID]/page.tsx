@@ -5,22 +5,27 @@ import React, { useEffect, useState } from "react"
 import toast, { Toaster } from "react-hot-toast"
 import { load } from "@cashfreepayments/cashfree-js"
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
+import { validParentOrigins } from "@/middleware"
 
 function index() {
 	const storeID = useParams().storeID
 	const [paymentDetails, setPaymentDetails] = useState<null | any>(null)
-	const router = useRouter()
+
+	if (typeof storeID !== "string")
+		return <h1>Error, invalid store id provided.</h1>
+
+	const validParentOrigin = validParentOrigins[storeID]
 
 	const sendMessageToParent = (message: string) => {
 		console.log("sending message", message)
-		window.parent.postMessage(message, "*")
+		window.parent.postMessage(message, validParentOrigin)
 	}
 
 	useEffect(() => {
 		sendMessageToParent("loaded")
 		window.addEventListener("message", event => {
 			if (paymentDetails) return
-			// if (event.origin !== "https://parent-origin.com") return
+			if (event.origin !== validParentOrigin) return
 			console.log(event.data)
 			try {
 				let data
