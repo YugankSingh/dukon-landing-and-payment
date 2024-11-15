@@ -17,9 +17,6 @@ export function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl
 	const prefix = "/checkout/payment/cashfree/"
 
-	console.log("prefix", prefix)
-	console.log("validOrigins", validOrigins)
-	console.log("environment", environment)
 	if (pathname.startsWith(prefix)) {
 		const storeID = pathname.slice(prefix.length).split("/")[0]
 
