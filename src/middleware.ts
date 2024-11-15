@@ -38,7 +38,7 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-	matcher: "/checkout/payment/cashfree/:storeID?",
+	matcher: "/:param*",
 }
 
 export const validParentOrigins = { ...validOrigins }
